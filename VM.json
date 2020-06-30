@@ -1,7 +1,12 @@
 {
-    "type": "vmware-vmx",
-    "source_path": "/home/admin/vmware/Template_CentOS7/Template_CentOS7.vmx",
-    "ssh_username": "root",
-    "ssh_password": "Password",
-    "shutdown_command": "shutdown -P now"
+    "builders": [
+        {
+            "type": "vmware-vmx",
+            "source_path": "/home/admin/vmware/Template_CentOS7/Template_CentOS7.vmx",
+            "ssh_username": "root",
+            "ssh_password": "Password1",
+            "vm_name": "VM_by_packer",
+            "shutdown_command": "shutdown -P now"
+        }
+    ]
 }
