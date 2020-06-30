@@ -1,0 +1,9 @@
+---
+- hosts: webservers
+
+  tasks:
+    - name: Garantir instalacao Apache
+      yum: name=httpd state=present
+
+    - name: iniciar servico Apache,boot
+      service: name=httpd enabled=yes state=starte
