@@ -3,26 +3,25 @@
       {
         "type": "vsphere-clone",
         
-        "vcenter_server":      "vcenter.vsphere65.test",
-        "username":            "root",
-        "password":            "jetbrains",
+        "vcenter_server":      "192.168.10.100",
+        "username":            "",
+        "password":            "",
         "insecure_connection": "true",
 
-        "template": "Win2k16_pvscsi_winrm",
-        "disk_size": "",
-        "network": "",
-        "notes": "Cloned by packer",
+        "template": "Template_Win_2k16_pvscsi",
+        "disk_size": "60000",
+        "network": "LAB",
+        "notes": "By packer",
 
-        "CPUs": "",
-        "cpu_cores": "",
-        "RAM": "",
+        "CPUs": "1",
+        "cpu_cores": "2",
+        "RAM": "4096",
 
         "tools_sync_time": "TRUE",
-        "vm_name":  "alpine-clone-{{timestamp}}",
-        "host":     "esxi-1.vsphere65.test",
-        "cluster": "",
-        "folder": "",
-        "datastore": "",
+        "vm_name":  "vm-clone-{{timestamp}}",
+        "host":     "192.168.10.200",
+        "cluster": "DEV",
+        "datastore": "DS-01",
   
         "communicator": "none"
       }
