@@ -8,7 +8,7 @@
         "password":            "",
         "insecure_connection": "true",
 
-        "template": "Template_Win_2k16_pvscsi",
+        "template": "2k16_pvscsi",
         "disk_size": "60000",
         "network": "LAB",
         "notes": "By packer",
