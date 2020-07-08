@@ -7,13 +7,24 @@
             "region": "af-south-1",
             "source_ami": "ami-0ec47ddb564d75b64",
             "instance_type": "t3.micro",
-            "ssh_username": "groot",
+            "ssh_username": "ec2-user",
             "ami_name": "by-packer-{{timestamp}}",
             "ami_description": "AMI by Manuh",
             "tags": {
+                "Name": "Apache",
                 "Environment": "Dev",
                 "OS_Version": "Amazon Linux"
             }
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "update.sh"
+        },
+        {
+            "type": "ansible",
+            "playbook_file": "apache.yml"
         }
     ]
 }
